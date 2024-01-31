@@ -96,6 +96,13 @@ h2 {
 	-moz-transform: rotateY(0deg);
 }
 
+#score {
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
 @media (max-width: 450px) {
 	.container {
 		width: 100vw;
