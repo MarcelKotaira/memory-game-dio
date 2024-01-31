@@ -17,6 +17,7 @@ const emojis = [
 	"🐮",
 ];
 let openCards = [];
+let gameOver = false;
 
 let shuffleEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
@@ -29,6 +30,8 @@ for (let i = 0; i < emojis.length; i++) {
 }
 
 function handleClick() {
+	if (gameOver) return;
+
 	if (openCards.length < 2 && !this.classList.contains("boxOpen")) {
 		this.classList.add("boxOpen");
 		openCards.push(this);
@@ -52,5 +55,6 @@ function checkMatch() {
 
 	if (document.querySelectorAll(".boxMatch").length === emojis.length) {
 		alert("Você Venceu!!!");
+		gameOver = true;
 	}
 }
