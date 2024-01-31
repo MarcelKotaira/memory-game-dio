@@ -9,6 +9,7 @@ body {
 
 .container {
 	position: relative;
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -93,4 +94,20 @@ h2 {
 .boxMatch::after {
 	transform: rotateY(180deg);
 	-moz-transform: rotateY(0deg);
+}
+
+@media (max-width: 450px) {
+	.container {
+		width: 100vw;
+	}
+
+	.game {
+		width: 270px;
+		height: 270px;
+	}
+
+	.item {
+		width: 60px;
+		height: 60px;
+	}
 }
